@@ -6,7 +6,7 @@ var routing = function (request, response) {
     response.end('Hello world response');
 }
 
-var server = http.createServerrouting();
+var server = http.createServer();
 
 server.listen(8080);
 
