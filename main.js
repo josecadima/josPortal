@@ -1,5 +1,7 @@
 var http = require('http');
 
+var port = process.env.port || 8080;
+
 http.createServer(function (req, res) {
     var html = buildHtml(req);
     
@@ -10,7 +12,7 @@ http.createServer(function (req, res) {
     });
 
     res.end(html);
-}).listen(8080);
+}).listen(port);
 
 function buildHtml(req) {
     var header = '';
