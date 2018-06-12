@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+}
+
+.text-link {
+    text-decoration: none;
+    color: white;
+}
+
+#main-container {
+    padding: 0px !important;
+}
+
+#header-container {
+    height: 70px;
+    padding: 0 !important;
+}
+
+#header-fullname {
+    margin-left: 5px;
+}
+
+#projects-container {
+    height: 500px !important;
+    margin: 80px 0 0 0 !important;
+    padding: 0px !important;
+}
+
+#projects-container .mat-figure {
+    align-items: initial;
+    padding: 0 10px 0 0;
+}
+
+#projects-container .mat-accordion {
+    width: 100%;
+}
+
+#projects-container .project-name {
+    line-height: 24px;
+}
+
+#module-container {
+    height: 500px !important;
+    margin: 80px 0 0 0 !important;
+    padding: 0px !important;
+}
+
+#module-container .mat-figure {
+    align-items: initial;
+}

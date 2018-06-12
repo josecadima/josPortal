@@ -1,0 +1,46 @@
+<mat-grid-list id="main-container" cols="5" rows="2">
+  
+  <!-- Header Section-->
+    <mat-grid-tile id="header-container" colspan="5" rowspan="1">
+      <mat-toolbar color="primary">
+          <mat-icon>home</mat-icon>
+        <a routerLink="home" class="text-link">Professional Portfolio</a>
+        <span class="fill-remaining-space"></span>
+        <mat-icon>contact_mail</mat-icon>
+        <span id="header-fullname">Jose Cadima</span>
+      </mat-toolbar>
+    </mat-grid-tile>
+  
+    <!-- Projects Section -->
+    <mat-grid-tile id="projects-container" colspan="1" rowspan="1">
+        <mat-accordion>
+            <mat-expansion-panel [expanded]="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title> 
+                    <mat-icon>apps</mat-icon>
+                  <span class="project-name">Professional  Projects</span> 
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-nav-list *ngFor="let project of projectsService.professionalProjects">
+                  <a mat-list-item routerLink="{{project.id}}"> {{project.name}} </a>
+               </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>apps</mat-icon>
+                    <span class="project-name">Fun Projects</span> 
+                  </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-nav-list *ngFor="let project of projectsService.funProjects">
+                <a mat-list-item routerLink="{{project.id}}"> {{project.name}} </a>
+             </mat-nav-list>
+            </mat-expansion-panel>
+          </mat-accordion>        
+    </mat-grid-tile>
+    
+    <!-- Main content -->
+    <mat-grid-tile id="module-container" colspan="4" rowspan="1">
+      <router-outlet></router-outlet>
+    </mat-grid-tile>
+  </mat-grid-list>
