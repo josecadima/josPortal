@@ -19,9 +19,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              { "input": "apps/josPortal/src", "glob": "favicon.ico", "output": "." },
               "src/assets",
-              "web.config"
+              { "input": "apps/josPortal/src", "glob": "web.config", "output": "." }
             ],
             "styles": [
               "src/styles.css"
