@@ -9,7 +9,7 @@ export class ProjectsService {
     professionalProjects = [];
 
     constructor (private http: Http) { 
-        console.log('josPortal API Url %s' + environment.josPortalApiUrl);
+        console.log('josPortal API Url %s', environment.josPortalApiUrl);
     }
 
     getProjects() {
