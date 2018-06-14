@@ -8,7 +8,9 @@ export class ProjectsService {
     funProjects = [];
     professionalProjects = [];
 
-    constructor (private http: Http) { }
+    constructor (private http: Http) { 
+        console.log('josPortal API Url %s' + environment.josPortalApiUrl);
+    }
 
     getProjects() {
         this.http.get(environment.josPortalApiUrl + 'projects').subscribe(res => {this.projects = res.json();});
