@@ -10,7 +10,7 @@ import { ProjectsService } from './services/projects.service'
 export class AppComponent {
   title = 'Jose Cadima Portfolio';
 
-  constructor(private projectsService: ProjectsService) { }
+  constructor(public projectsService: ProjectsService) { }
 
   ngOnInit() {
     this.projectsService.getProfessionalProjects();
